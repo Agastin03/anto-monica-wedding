@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" width="120" height="160" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E9D097"/>
+      <stop offset="35%" stop-color="#C49A55"/>
+      <stop offset="70%" stop-color="#F5E4B8"/>
+      <stop offset="100%" stop-color="#8E6928"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Vertical Beam -->
+  <path d="M57 15 C57 12, 63 12, 63 15 L63 45 L93 45 C96 45, 96 51, 93 51 L63 51 L63 145 C63 148, 57 148, 57 145 L57 51 L27 51 C24 51, 24 45, 27 45 L57 45 Z" fill="url(#goldGrad)" filter="url(#goldGlow)"/>
+  
+  <!-- Center Diamond / Burst -->
+  <polygon points="60,40 68,48 60,56 52,48" fill="url(#goldGrad)"/>
+  <circle cx="60" cy="48" r="2.5" fill="#FFF7EC"/>
+  
+  <!-- Trefoil Top End -->
+  <circle cx="60" cy="12" r="4.5" fill="url(#goldGrad)"/>
+  <circle cx="54" cy="15" r="3" fill="url(#goldGrad)"/>
+  <circle cx="66" cy="15" r="3" fill="url(#goldGrad)"/>
+  
+  <!-- Trefoil Left End -->
+  <circle cx="24" cy="48" r="4.5" fill="url(#goldGrad)"/>
+  <circle cx="27" cy="42" r="3" fill="url(#goldGrad)"/>
+  <circle cx="27" cy="54" r="3" fill="url(#goldGrad)"/>
+  
+  <!-- Trefoil Right End -->
+  <circle cx="96" cy="48" r="4.5" fill="url(#goldGrad)"/>
+  <circle cx="93" cy="42" r="3" fill="url(#goldGrad)"/>
+  <circle cx="93" cy="54" r="3" fill="url(#goldGrad)"/>
+  
+  <!-- Trefoil Bottom End -->
+  <circle cx="60" cy="148" r="4.5" fill="url(#goldGrad)"/>
+  <circle cx="54" cy="145" r="3" fill="url(#goldGrad)"/>
+  <circle cx="66" cy="145" r="3" fill="url(#goldGrad)"/>
+  
+  <!-- Delicate radiating rays from center -->
+  <line x1="60" y1="36" x2="60" y2="30" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="60" y1="60" x2="60" y2="66" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="48" y1="48" x2="42" y2="48" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="72" y1="48" x2="78" y2="48" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round"/>
+  
+  <line x1="51" y1="39" x2="46" y2="34" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round"/>
+  <line x1="69" y1="39" x2="74" y2="34" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round"/>
+  <line x1="51" y1="57" x2="46" y2="62" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round"/>
+  <line x1="69" y1="57" x2="74" y2="62" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Floral flourishes around intersection -->
+  <path d="M52 40 C46 32, 40 38, 48 45" stroke="url(#goldGrad)" stroke-width="1" fill="none"/>
+  <path d="M68 40 C74 32, 80 38, 72 45" stroke="url(#goldGrad)" stroke-width="1" fill="none"/>
+  <path d="M52 56 C46 64, 40 58, 48 51" stroke="url(#goldGrad)" stroke-width="1" fill="none"/>
+  <path d="M68 56 C74 64, 80 58, 72 51" stroke="url(#goldGrad)" stroke-width="1" fill="none"/>
+</svg>

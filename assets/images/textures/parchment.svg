@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <filter id="paperGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise"/>
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 0.99
+        0 0 0 0 0.96
+        0 0 0 0 0.92
+        0 0 0 0.05 0" in="noise" result="coloredNoise"/>
+      <feBlend mode="multiply" in="SourceGraphic" in2="coloredNoise"/>
+    </filter>
+  </defs>
+  <rect width="200" height="200" fill="#FFF7EC"/>
+  <!-- Subtle gold damask watermark / lace outline -->
+  <g stroke="#C49A55" stroke-width="0.5" fill="none" opacity="0.07">
+    <circle cx="100" cy="100" r="40"/>
+    <circle cx="100" cy="100" r="60" stroke-dasharray="2,3"/>
+    <path d="M100 40 C120 70, 120 130, 100 160"/>
+    <path d="M100 40 C80 70, 80 130, 100 160"/>
+    <path d="M40 100 C70 120, 130 120, 160 100"/>
+    <path d="M40 100 C70 80, 130 80, 160 100"/>
+    <circle cx="0" cy="0" r="30"/>
+    <circle cx="200" cy="0" r="30"/>
+    <circle cx="0" cy="200" r="30"/>
+    <circle cx="200" cy="200" r="30"/>
+  </g>
+</svg>

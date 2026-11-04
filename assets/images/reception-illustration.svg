@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240" fill="none">
+  <defs>
+    <linearGradient id="recGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C378"/>
+      <stop offset="50%" stop-color="#C49A55"/>
+      <stop offset="100%" stop-color="#8E6928"/>
+    </linearGradient>
+    <radialGradient id="recHalo" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF7EC" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#F5E6D2" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFF7EC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Soft Halo Background -->
+  <circle cx="160" cy="110" r="95" fill="url(#recHalo)"/>
+  <circle cx="160" cy="110" r="94" stroke="#E5C378" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
+
+  <!-- Grand Reception Arch -->
+  <path d="M70 215 L70 120 C70 65, 250 65, 250 120 L250 215" stroke="url(#recGold)" stroke-width="2"/>
+  <path d="M80 215 L80 125 C80 75, 240 75, 240 125 L240 215" stroke="url(#recGold)" stroke-width="1" stroke-dasharray="2,2" opacity="0.7"/>
+
+  <!-- Floral Garland on Arch Top -->
+  <g fill="#E5C378" opacity="0.85">
+    <circle cx="160" cy="62" r="5"/>
+    <circle cx="145" cy="65" r="4"/>
+    <circle cx="175" cy="65" r="4"/>
+    <circle cx="130" cy="72" r="3.5"/>
+    <circle cx="190" cy="72" r="3.5"/>
+    <circle cx="115" cy="83" r="3"/>
+    <circle cx="205" cy="83" r="3"/>
+    <circle cx="102" cy="98" r="3"/>
+    <circle cx="218" cy="98" r="3"/>
+  </g>
+  <!-- Leaves draping from arch -->
+  <path d="M160 62 C158 54, 162 48, 160 42" stroke="url(#recGold)" stroke-width="1"/>
+  <path d="M145 65 C140 60, 138 52, 142 46" stroke="url(#recGold)" stroke-width="1"/>
+  <path d="M175 65 C180 60, 182 52, 178 46" stroke="url(#recGold)" stroke-width="1"/>
+
+  <!-- Crystal Chandelier Hanging from Center -->
+  <line x1="160" y1="67" x2="160" y2="92" stroke="url(#recGold)" stroke-width="1.5"/>
+  <circle cx="160" cy="93" r="3" fill="url(#recGold)"/>
+  
+  <!-- Chandelier Arms -->
+  <path d="M160 98 C145 98, 138 108, 142 118" stroke="url(#recGold)" stroke-width="1.2" fill="none"/>
+  <path d="M160 98 C175 98, 182 108, 178 118" stroke="url(#recGold)" stroke-width="1.2" fill="none"/>
+  <path d="M160 102 C150 102, 146 112, 148 122" stroke="url(#recGold)" stroke-width="1" fill="none"/>
+  <path d="M160 102 C170 102, 174 112, 172 122" stroke="url(#recGold)" stroke-width="1" fill="none"/>
+
+  <!-- Candle Flames / Crystals -->
+  <g fill="#F5E4B8" stroke="url(#recGold)" stroke-width="0.8">
+    <circle cx="142" cy="115" r="2.5"/>
+    <circle cx="178" cy="115" r="2.5"/>
+    <circle cx="148" cy="119" r="2"/>
+    <circle cx="172" cy="119" r="2"/>
+    <circle cx="160" cy="122" r="3"/>
+    <!-- Hanging crystal drops -->
+    <polygon points="160,126 162,133 160,136 158,133"/>
+    <polygon points="142,118 143.5,123 142,125 140.5,123"/>
+    <polygon points="178,118 179.5,123 178,125 176.5,123"/>
+  </g>
+
+  <!-- Celebration Toasting Glasses (Centerpiece) -->
+  <!-- Left Flute -->
+  <path d="M142 186 L152 165 C154 161, 158 163, 155 168 L147 188 Z" fill="#FFF7EC" stroke="url(#recGold)" stroke-width="1.2"/>
+  <line x1="145" y1="187" x2="136" y2="204" stroke="url(#recGold)" stroke-width="1.2"/>
+  <line x1="130" y1="205" x2="142" y2="203" stroke="url(#recGold)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Right Flute -->
+  <path d="M178 186 L168 165 C166 161, 162 163, 165 168 L173 188 Z" fill="#FFF7EC" stroke="url(#recGold)" stroke-width="1.2"/>
+  <line x1="175" y1="187" x2="184" y2="204" stroke="url(#recGold)" stroke-width="1.2"/>
+  <line x1="178" y1="203" x2="190" y2="205" stroke="url(#recGold)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Clinking Star Sparkle -->
+  <polygon points="160,158 162,163 167,163 163,166 165,171 160,168 155,171 157,166 153,163 158,163" fill="#E5C378"/>
+  <circle cx="160" cy="165" r="1.5" fill="#FFF7EC"/>
+
+  <!-- Floral Pedestals at Base -->
+  <path d="M60 215 L95 215" stroke="url(#recGold)" stroke-width="2"/>
+  <path d="M225 215 L260 215" stroke="url(#recGold)" stroke-width="2"/>
+
+  <!-- Floor line -->
+  <line x1="40" y1="215" x2="280" y2="215" stroke="url(#recGold)" stroke-width="1.5"/>
+  <line x1="50" y1="220" x2="270" y2="220" stroke="url(#recGold)" stroke-width="0.8" opacity="0.6"/>
+</svg>

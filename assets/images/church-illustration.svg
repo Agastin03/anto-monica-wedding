@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240" fill="none">
+  <defs>
+    <linearGradient id="churchGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C378"/>
+      <stop offset="50%" stop-color="#C49A55"/>
+      <stop offset="100%" stop-color="#8E6928"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFF7EC" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#F5E6D2" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="roseWindowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF7EC"/>
+      <stop offset="60%" stop-color="#EED08F"/>
+      <stop offset="100%" stop-color="#C49A55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Soft Halo Background -->
+  <circle cx="160" cy="110" r="95" fill="url(#skyGrad)"/>
+  <circle cx="160" cy="110" r="94" stroke="#E5C378" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
+
+  <!-- Main Steeple Cross -->
+  <line x1="160" y1="12" x2="160" y2="35" stroke="url(#churchGold)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="152" y1="20" x2="168" y2="20" stroke="url(#churchGold)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="160" cy="12" r="2" fill="url(#churchGold)"/>
+
+  <!-- Steeple Spire -->
+  <polygon points="160,35 145,90 175,90" fill="#F5E6D2" stroke="url(#churchGold)" stroke-width="1.5"/>
+
+  <!-- Belfry Tower -->
+  <rect x="140" y="90" width="40" height="40" fill="#FFF7EC" stroke="url(#churchGold)" stroke-width="1.5"/>
+  <!-- Bell Arch -->
+  <path d="M152 118 L152 104 C152 98, 168 98, 168 104 L168 118 Z" fill="#E5C378" fill-opacity="0.3" stroke="url(#churchGold)" stroke-width="1.2"/>
+  <!-- Bell -->
+  <path d="M156 112 C156 107, 164 107, 164 112 L166 116 L154 116 Z" fill="url(#churchGold)"/>
+  <circle cx="160" cy="117" r="1.5" fill="#8E6928"/>
+
+  <!-- Main Cathedral Facade -->
+  <!-- Left Side Wing -->
+  <polygon points="85,150 135,115 135,210 85,210" fill="#FFF7EC" stroke="url(#churchGold)" stroke-width="1.5"/>
+  <!-- Right Side Wing -->
+  <polygon points="235,150 185,115 185,210 235,210" fill="#FFF7EC" stroke="url(#churchGold)" stroke-width="1.5"/>
+
+  <!-- Left Side Spire / Turret -->
+  <polygon points="85,150 78,130 92,130" fill="#F5E6D2" stroke="url(#churchGold)" stroke-width="1.2"/>
+  <line x1="85" y1="124" x2="85" y2="130" stroke="url(#churchGold)" stroke-width="1.5"/>
+  <line x1="82" y1="127" x2="88" y2="127" stroke="url(#churchGold)" stroke-width="1.5"/>
+
+  <!-- Right Side Spire / Turret -->
+  <polygon points="235,150 228,130 242,130" fill="#F5E6D2" stroke="url(#churchGold)" stroke-width="1.2"/>
+  <line x1="235" y1="124" x2="235" y2="130" stroke="url(#churchGold)" stroke-width="1.5"/>
+  <line x1="232" y1="127" x2="238" y2="127" stroke="url(#churchGold)" stroke-width="1.5"/>
+
+  <!-- Center Nave Wall -->
+  <polygon points="135,130 160,110 185,130 185,210 135,210" fill="#FFF7EC" stroke="url(#churchGold)" stroke-width="1.5"/>
+
+  <!-- Rose Window in Center -->
+  <circle cx="160" cy="142" r="14" fill="url(#roseWindowGlow)" stroke="url(#churchGold)" stroke-width="1.5"/>
+  <!-- Rose Window Petals -->
+  <circle cx="160" cy="142" r="4" fill="#C49A55"/>
+  <g stroke="url(#churchGold)" stroke-width="0.8">
+    <circle cx="160" cy="136" r="2.5" fill="none"/>
+    <circle cx="160" cy="148" r="2.5" fill="none"/>
+    <circle cx="154" cy="142" r="2.5" fill="none"/>
+    <circle cx="166" cy="142" r="2.5" fill="none"/>
+  </g>
+
+  <!-- Main Cathedral Arched Portal (Door) -->
+  <path d="M148 210 L148 178 C148 168, 172 168, 172 178 L172 210 Z" fill="#8E302A" stroke="url(#churchGold)" stroke-width="1.5"/>
+  <!-- Double Doors Line -->
+  <line x1="160" y1="174" x2="160" y2="210" stroke="url(#churchGold)" stroke-width="1"/>
+  <!-- Portal Outer Arch Trim -->
+  <path d="M143 210 L143 176 C143 162, 177 162, 177 176 L177 210" stroke="url(#churchGold)" stroke-width="1.2" stroke-dasharray="2,2"/>
+
+  <!-- Side Windows (Left & Right) -->
+  <path d="M102 185 L102 165 C102 160, 118 160, 118 165 L118 185 Z" fill="#F5E6D2" stroke="url(#churchGold)" stroke-width="1"/>
+  <line x1="110" y1="160" x2="110" y2="185" stroke="url(#churchGold)" stroke-width="0.8"/>
+  <path d="M202 185 L202 165 C202 160, 218 160, 218 165 L218 185 Z" fill="#F5E6D2" stroke="url(#churchGold)" stroke-width="1"/>
+  <line x1="210" y1="160" x2="210" y2="185" stroke="url(#churchGold)" stroke-width="0.8"/>
+
+  <!-- Steps Foundation -->
+  <line x1="70" y1="210" x2="250" y2="210" stroke="url(#churchGold)" stroke-width="2"/>
+  <line x1="60" y1="215" x2="260" y2="215" stroke="url(#churchGold)" stroke-width="1.5"/>
+  <line x1="50" y1="220" x2="270" y2="220" stroke="url(#churchGold)" stroke-width="1"/>
+
+  <!-- Botanical Vines at Base -->
+  <path d="M65 210 C75 204, 85 206, 95 210" stroke="#C49A55" stroke-width="1"/>
+  <circle cx="78" cy="206" r="2" fill="#E5C378"/>
+  <path d="M255 210 C245 204, 235 206, 225 210" stroke="#C49A55" stroke-width="1"/>
+  <circle cx="242" cy="206" r="2" fill="#E5C378"/>
+</svg>

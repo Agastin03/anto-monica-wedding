@@ -1,0 +1,133 @@
+/* ==========================================================================
+   David & Monica – Luxury Wedding Animations & Keyframes
+   ========================================================================== */
+
+/* Particle & Petal Canvas (Full Screen Ambient) */
+#ambient-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 15;
+  opacity: 0.85;
+}
+
+/* Scroll Reveal States */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+.reveal-delay-4 { transition-delay: 0.6s; }
+
+/* Subtle Gold Foil Shimmer Effect */
+.gold-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  animation: sweepShimmer 6s infinite;
+  pointer-events: none;
+}
+
+@keyframes sweepShimmer {
+  0% { transform: translateX(-120%) rotate(25deg); }
+  25% { transform: translateX(350%) rotate(25deg); }
+  100% { transform: translateX(350%) rotate(25deg); }
+}
+
+/* Floating Gentle Float Animation */
+.animate-float {
+  animation: floatUpDown 5s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Gentle Soft Pulse */
+.animate-pulse-soft {
+  animation: softPulse 4s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+/* Rotating Gold Rays / Halo */
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Music Soundwave Bars */
+.sound-waves {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 14px;
+}
+
+.sound-bar {
+  width: 2.5px;
+  background: currentColor;
+  border-radius: 2px;
+  animation: soundBarAnim 1.2s ease-in-out infinite alternate;
+}
+
+.sound-bar:nth-child(1) { height: 30%; animation-delay: 0.1s; }
+.sound-bar:nth-child(2) { height: 90%; animation-delay: 0.3s; }
+.sound-bar:nth-child(3) { height: 60%; animation-delay: 0.2s; }
+.sound-bar:nth-child(4) { height: 100%; animation-delay: 0.4s; }
+
+.paused .sound-bar {
+  animation-play-state: paused;
+  height: 30% !important;
+}
+
+@keyframes soundBarAnim {
+  0% { height: 20%; }
+  100% { height: 100%; }
+}
+
+/* Floating Petal Styles */
+.petal {
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(circle, #F8DEC5 20%, #E8B998 70%, #C49A55 100%);
+  border-radius: 60% 0 60% 0;
+  opacity: 0.7;
+  filter: drop-shadow(0 2px 4px rgba(101, 65, 50, 0.12));
+}

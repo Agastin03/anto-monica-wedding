@@ -1,0 +1,19 @@
+{
+  "name": "david-monica-wedding-invitation",
+  "version": "1.0.0",
+  "description": "Premium Digital Wedding Invitation Website for David Anto Viagul & Monica Merlin",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "wedding-invitation",
+    "david-and-monica",
+    "dindigul-wedding",
+    "christian-wedding",
+    "responsive-website"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}

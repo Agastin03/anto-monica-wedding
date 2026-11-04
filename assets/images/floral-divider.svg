@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 50" width="100%" height="40" fill="none">
+  <defs>
+    <linearGradient id="divGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C49A55" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#C49A55" stop-opacity="0.6"/>
+      <stop offset="45%" stop-color="#E5C378"/>
+      <stop offset="50%" stop-color="#FFF7EC"/>
+      <stop offset="55%" stop-color="#E5C378"/>
+      <stop offset="80%" stop-color="#C49A55" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C49A55" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Line -->
+  <line x1="30" y1="25" x2="200" y2="25" stroke="url(#divGold)" stroke-width="1"/>
+  <!-- Right Line -->
+  <line x1="300" y1="25" x2="470" y2="25" stroke="url(#divGold)" stroke-width="1"/>
+
+  <!-- Left Flourish / Leaves -->
+  <path d="M200 25 C210 20, 220 18, 230 25 C222 28, 214 26, 205 25" stroke="#C49A55" stroke-width="1" fill="#C49A55" fill-opacity="0.3"/>
+  <path d="M215 22 C218 16, 225 15, 228 20 C223 21, 219 22, 215 22" fill="#E5C378" fill-opacity="0.7"/>
+  <path d="M222 27 C225 32, 232 32, 234 27 C230 27, 226 27, 222 27" fill="#E5C378" fill-opacity="0.7"/>
+
+  <!-- Center Diamond & Cross Motif -->
+  <polygon points="250,15 258,25 250,35 242,25" fill="#E5C378" stroke="#C49A55" stroke-width="1"/>
+  <circle cx="250" cy="25" r="2.5" fill="#FFF7EC"/>
+
+  <!-- Side Accent Beads -->
+  <circle cx="238" cy="25" r="2" fill="#C49A55"/>
+  <circle cx="262" cy="25" r="2" fill="#C49A55"/>
+  <circle cx="230" cy="25" r="1.5" fill="#E5C378"/>
+  <circle cx="270" cy="25" r="1.5" fill="#E5C378"/>
+
+  <!-- Right Flourish / Leaves -->
+  <path d="M300 25 C290 20, 280 18, 270 25 C278 28, 286 26, 295 25" stroke="#C49A55" stroke-width="1" fill="#C49A55" fill-opacity="0.3"/>
+  <path d="M285 22 C282 16, 275 15, 272 20 C277 21, 281 22, 285 22" fill="#E5C378" fill-opacity="0.7"/>
+  <path d="M278 27 C275 32, 268 32, 266 27 C270 27, 274 27, 278 27" fill="#E5C378" fill-opacity="0.7"/>
+</svg>
