@@ -9,14 +9,14 @@
   
   <!-- Primary Meta Tags -->
   <meta name="title" content="Anto &amp; Monica – Wedding Invitation | 29 November 2026">
-  <meta name="description" content="Together with our families, Anto Viagul and Monica Merlin joyfully invite you to celebrate their holy matrimony on Sunday, 29 November 2026 at Seven Dolour's Church, Mettupatti, Dindigul.">
+  <meta name="description" content="Together with our families, Anto Viagul and Monica Merlin joyfully invite you to celebrate their holy matrimony on Sunday, 29 November 2026 at Seven Dolours Church, Mettupatti, Dindigul.">
   <meta name="keywords" content="Anto Viagul, Monica Merlin, Wedding Invitation, Seven Dolours Church Mettupatti, Dindigul Wedding">
   <meta name="theme-color" content="#FFF7EC">
 
   <!-- Open Graph / WhatsApp Preview Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="🕊️ Wedding Invitation: Anto &amp; Monica">
-  <meta property="og:description" content="Together with our families, we joyfully invite you to celebrate our wedding on Sunday, 29 November 2026 at Seven Dolour's Church, Mettupatti, Dindigul.">
+  <meta property="og:description" content="Together with our families, we joyfully invite you to celebrate our wedding on Sunday, 29 November 2026 at Seven Dolours Church, Mettupatti, Dindigul.">
   <meta property="og:image" content="assets/images/gold-seal.svg">
   <meta property="twitter:card" content="summary_large_image">
 
@@ -194,8 +194,8 @@
         </p>
 
         <!-- Cathedral Arch Portrait Frame with Anto & Monica's Photograph -->
-        <div class="hero-portrait-wrapper gold-shimmer">
-          <div class="hero-portrait-inner">
+        <div class="hero-portrait-wrapper">
+          <div class="hero-portrait-inner gold-shimmer">
             <img 
               id="hero-couple-img" 
               src="assets/images/couple-hero.jpg" 
@@ -280,18 +280,18 @@
         <p class="section-subtitle">Counting every precious moment until we exchange vows in the presence of God.</p>
       </div>
 
-      <!-- Live Countdown Grid -->
+      <!-- Live Countdown Grid (Target: 29 Nov 2026, 10:30 AM IST) -->
       <div id="countdown-grid" class="countdown-grid reveal reveal-delay-1">
         <div class="countdown-card">
-          <span id="count-days" class="countdown-number">00</span>
+          <span id="count-days" class="countdown-number">24</span>
           <span class="countdown-label">Days</span>
         </div>
         <div class="countdown-card">
-          <span id="count-hours" class="countdown-number">00</span>
+          <span id="count-hours" class="countdown-number">09</span>
           <span class="countdown-label">Hours</span>
         </div>
         <div class="countdown-card">
-          <span id="count-minutes" class="countdown-number">00</span>
+          <span id="count-minutes" class="countdown-number">45</span>
           <span class="countdown-label">Minutes</span>
         </div>
         <div class="countdown-card">
@@ -300,8 +300,30 @@
         </div>
       </div>
 
-      <!-- Celebration Message when Ceremony Arrives -->
-      <div id="countdown-celebration" class="countdown-celebration" style="display: none;">
+      <!-- Synchronous Immediate Parse-Time Initializer -->
+      <script>
+        (function() {
+          try {
+            var target = 1795928400000; // 29 Nov 2026, 10:30 AM IST (UTC+05:30)
+            var diff = target - Date.now();
+            if (diff > 0) {
+              var s = Math.floor(diff / 1000);
+              var d = Math.floor(s / 86400);
+              var h = Math.floor((s % 86400) / 3600);
+              var m = Math.floor((s % 3600) / 60);
+              var sec = s % 60;
+              var pad = function(n) { return n < 10 ? '0' + n : String(n); };
+              var elD = document.getElementById('count-days'); if (elD) elD.textContent = pad(d);
+              var elH = document.getElementById('count-hours'); if (elH) elH.textContent = pad(h);
+              var elM = document.getElementById('count-minutes'); if (elM) elM.textContent = pad(m);
+              var elS = document.getElementById('count-seconds'); if (elS) elS.textContent = pad(sec);
+            }
+          } catch(e) {}
+        })();
+      </script>
+
+      <!-- Celebration Message when Ceremony Arrives (Strictly hidden before wedding) -->
+      <div id="countdown-celebration" class="countdown-celebration" style="display: none !important;">
         <h3 class="countdown-celebration-title">The Celebration Has Begun!</h3>
         <p class="countdown-celebration-text">
           Anto Viagul &amp; Monica Merlin are united in Holy Matrimony. May God bless their eternal bond!
@@ -330,7 +352,7 @@
         <!-- SECTION 5: The Wedding Ceremony -->
         <article class="event-card reveal">
           <div class="event-ill-badge">
-            <img src="assets/images/church-illustration.svg" alt="Seven Dolour's Church">
+            <img src="assets/images/church-illustration.svg" alt="Seven Dolours Church">
           </div>
 
           <span class="event-type-tag">Solemn Vows</span>
@@ -377,7 +399,7 @@
               </div>
               <div class="event-detail-content">
                 <span class="event-detail-label">Church Venue</span>
-                <span class="event-detail-value">Seven Dolour's Church</span>
+                <span class="event-detail-value">Seven Dolours Church</span>
                 <span class="event-detail-subvalue">Mettupatti, Dindigul, Tamil Nadu, India</span>
               </div>
             </li>
@@ -396,6 +418,17 @@
               </svg>
               Get Directions
             </a>
+
+            <!-- Add to Calendar -->
+            <button class="btn btn-outline-gold" data-calendar="ceremony" type="button" title="Save ceremony date to your calendar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                <line x1="16" x2="16" y1="2" y2="6"/>
+                <line x1="8" x2="8" y1="2" y2="6"/>
+                <line x1="3" x2="21" y1="10" y2="10"/>
+              </svg>
+              Add to Calendar
+            </button>
           </div>
         </article>
 
@@ -470,6 +503,17 @@
               </svg>
               Get Directions
             </a>
+
+            <!-- Add to Calendar -->
+            <button class="btn btn-outline-gold" data-calendar="reception" type="button" title="Save reception date to your calendar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                <line x1="16" x2="16" y1="2" y2="6"/>
+                <line x1="8" x2="8" y1="2" y2="6"/>
+                <line x1="3" x2="21" y1="10" y2="10"/>
+              </svg>
+              Add to Calendar
+            </button>
           </div>
         </article>
 
@@ -668,15 +712,15 @@
       </p>
 
       <div class="footer-actions">
-        <button id="btn-reopen-envelope" class="btn btn-outline-gold btn-sm" style="color: #FFF7EC; border-color: var(--accent-gold); background: rgba(255, 247, 236, 0.08);" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E5C378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button id="btn-reopen-envelope" class="btn btn-outline-gold btn-sm" type="button" aria-label="Replay the 3D envelope invitation opening">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect width="20" height="16" x="2" y="4" rx="2"/>
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
           </svg>
           View Envelope Opening Again
         </button>
 
-        <a href="#hero" class="btn btn-gold btn-sm">
+        <a href="#hero" class="btn btn-gold btn-sm" aria-label="Scroll smoothly back to top">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"/>
           </svg>
@@ -685,7 +729,7 @@
       </div>
 
       <p class="footer-copy">
-        Seven Dolour's Church, Mettupatti &bull; Sowrastra Sabai Mahal, Bharathipuram &bull; Dindigul, Tamil Nadu<br>
+        Seven Dolours Church, Mettupatti &bull; Sowrastra Sabai Mahal, Bharathipuram &bull; Dindigul, Tamil Nadu<br>
         Wedding Celebration &bull; Sunday, 29 November 2026
       </p>
     </div>

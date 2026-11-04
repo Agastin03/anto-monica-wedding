@@ -338,22 +338,37 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer Outlined Button (Must be visible on dark background) */
 .site-footer .btn-outline-gold {
   color: #FFF7EC !important;
-  border: 1.5px solid var(--accent-gold) !important;
-  background: rgba(255, 247, 236, 0.08) !important;
+  border: 1.5px solid #E5C378 !important;
+  background: rgba(229, 195, 120, 0.16) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.55rem !important;
+  font-family: var(--font-serif-title) !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.2px !important;
+  padding: 0.7rem 1.4rem !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+  transition: all 0.3s ease !important;
 }
 
 .site-footer .btn-outline-gold svg {
   stroke: #E5C378 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
 }
 
 .site-footer .btn-outline-gold:hover {
   background: var(--accent-gold) !important;
-  color: var(--text-dark) !important;
-  border-color: var(--accent-gold) !important;
+  color: #3D150E !important;
+  border-color: #FFFDF9 !important;
+  transform: translateY(-2px) !important;
 }
 
 .site-footer .btn-outline-gold:hover svg {
-  stroke: var(--text-dark) !important;
+  stroke: #3D150E !important;
 }
 
 /* Small Button Variant */

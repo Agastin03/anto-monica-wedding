@@ -14,7 +14,7 @@
   const defaultWishes = [
     {
       name: "Rev. Father & Parish Council",
-      relation: "Seven Dolour's Church",
+      relation: "Seven Dolours Church",
       message: "May the divine grace of Almighty God bless your union with eternal love, unwavering faith, and joyful peace. 'What God has joined together, let no one separate.'",
       date: "Confirmed"
     },

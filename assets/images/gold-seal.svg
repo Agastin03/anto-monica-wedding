@@ -1,31 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
-    <!-- Wax Gold Gradient -->
+    <!-- Wax Gold Radial Gradient -->
     <radialGradient id="waxGold" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#FDF1D6"/>
-      <stop offset="25%" stop-color="#E4C078"/>
-      <stop offset="55%" stop-color="#C49A55"/>
-      <stop offset="85%" stop-color="#8E6928"/>
-      <stop offset="100%" stop-color="#5C4113"/>
+      <stop offset="0%" stop-color="#FFF3DA"/>
+      <stop offset="22%" stop-color="#E8C784"/>
+      <stop offset="55%" stop-color="#C79C56"/>
+      <stop offset="85%" stop-color="#946F2B"/>
+      <stop offset="100%" stop-color="#634515"/>
     </radialGradient>
 
-    <!-- Bevel / 3D Shadow -->
+    <!-- Bevel / 3D Shadow for Wax Body -->
     <filter id="sealShadow" x="-15%" y="-15%" width="130%" height="135%">
-      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#361705" flood-opacity="0.38"/>
-      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#2D1108" flood-opacity="0.42"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.25"/>
     </filter>
 
     <linearGradient id="innerRim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF0CD"/>
-      <stop offset="50%" stop-color="#C49A55"/>
-      <stop offset="100%" stop-color="#694B1B"/>
-    </linearGradient>
-
-    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF8E7"/>
-      <stop offset="30%" stop-color="#EED08F"/>
-      <stop offset="70%" stop-color="#C49A55"/>
-      <stop offset="100%" stop-color="#7B5719"/>
+      <stop offset="0%" stop-color="#FFF5DC"/>
+      <stop offset="50%" stop-color="#C79C56"/>
+      <stop offset="100%" stop-color="#6B4D1B"/>
     </linearGradient>
   </defs>
 
@@ -35,41 +28,49 @@
       C109 12, 115 15, 122 17 C130 20, 137 20, 144 25 C152 30, 157 33, 163 40 C170 47, 172 53, 177 61 C181 69, 183 75, 186 84 C188 92, 188 100, 187 108 C185 117, 183 124, 179 132 C174 140, 170 146, 164 153 C157 160, 151 165, 142 170 C134 175, 127 178, 118 181 C109 184, 101 185, 92 184 C83 183, 76 181, 67 177 C59 173, 53 169, 45 163 C38 157, 33 151, 28 143 C22 135, 19 128, 17 119 C14 110, 14 102, 15 93 C17 84, 19 77, 24 69 C29 61, 33 55, 41 48 C48 42, 54 37, 63 32 C71 27, 78 24, 87 21 C93 19, 96 12, 100 12 Z" 
       fill="url(#waxGold)"/>
 
-    <!-- Inner Recessed Circle -->
+    <!-- Inner Recessed Circles -->
     <circle cx="100" cy="100" r="70" fill="url(#waxGold)" stroke="url(#innerRim)" stroke-width="2.5" opacity="0.95"/>
-    <circle cx="100" cy="100" r="66" fill="none" stroke="#7B5719" stroke-width="1" opacity="0.6" stroke-dasharray="2,2"/>
-    <circle cx="100" cy="100" r="62" fill="none" stroke="url(#innerRim)" stroke-width="1.2" opacity="0.8"/>
+    <circle cx="100" cy="100" r="66" fill="none" stroke="#7B5719" stroke-width="1" opacity="0.65" stroke-dasharray="2,2"/>
+    <circle cx="100" cy="100" r="62" fill="none" stroke="url(#innerRim)" stroke-width="1.2" opacity="0.85"/>
 
     <!-- Laurel Wreath Leaves (Left) -->
-    <g stroke="url(#goldText)" stroke-width="1.2" fill="none" opacity="0.85">
+    <g stroke="#3E150D" stroke-width="1.6" fill="none">
       <path d="M56 100 C56 75, 75 58, 92 56"/>
-      <path d="M60 92 C56 89, 52 90, 50 94 C53 96, 57 95, 60 92 Z" fill="url(#goldText)"/>
-      <path d="M65 82 C61 80, 58 82, 57 86 C60 88, 64 86, 65 82 Z" fill="url(#goldText)"/>
-      <path d="M72 73 C68 72, 65 75, 65 79 C68 80, 72 77, 72 73 Z" fill="url(#goldText)"/>
-      <path d="M81 66 C78 66, 75 69, 76 74 C79 74, 82 70, 81 66 Z" fill="url(#goldText)"/>
+      <path d="M60 92 C56 89, 52 90, 50 94 C53 96, 57 95, 60 92 Z" fill="#3E150D"/>
+      <path d="M65 82 C61 80, 58 82, 57 86 C60 88, 64 86, 65 82 Z" fill="#3E150D"/>
+      <path d="M72 73 C68 72, 65 75, 65 79 C68 80, 72 77, 72 73 Z" fill="#3E150D"/>
+      <path d="M81 66 C78 66, 75 69, 76 74 C79 74, 82 70, 81 66 Z" fill="#3E150D"/>
     </g>
 
     <!-- Laurel Wreath Leaves (Right) -->
-    <g stroke="url(#goldText)" stroke-width="1.2" fill="none" opacity="0.85">
+    <g stroke="#3E150D" stroke-width="1.6" fill="none">
       <path d="M144 100 C144 75, 125 58, 108 56"/>
-      <path d="M140 92 C144 89, 148 90, 150 94 C147 96, 143 95, 140 92 Z" fill="url(#goldText)"/>
-      <path d="M135 82 C139 80, 142 82, 143 86 C140 88, 136 86, 135 82 Z" fill="url(#goldText)"/>
-      <path d="M128 73 C132 72, 135 75, 135 79 C132 80, 128 77, 128 73 Z" fill="url(#goldText)"/>
-      <path d="M119 66 C122 66, 125 69, 124 74 C121 74, 118 70, 119 66 Z" fill="url(#goldText)"/>
+      <path d="M140 92 C144 89, 148 90, 150 94 C147 96, 143 95, 140 92 Z" fill="#3E150D"/>
+      <path d="M135 82 C139 80, 142 82, 143 86 C140 88, 136 86, 135 82 Z" fill="#3E150D"/>
+      <path d="M128 73 C132 72, 135 75, 135 79 C132 80, 128 77, 128 73 Z" fill="#3E150D"/>
+      <path d="M119 66 C122 66, 125 69, 124 74 C121 74, 118 70, 119 66 Z" fill="#3E150D"/>
     </g>
 
-    <!-- Mini Top Cross -->
-    <path d="M100 50 L100 62 M95 54 L105 54" stroke="url(#goldText)" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Holy Cross at Top of Seal -->
+    <path d="M100 46 L100 62 M93 52 L107 52" stroke="#3E150D" stroke-width="2.2" stroke-linecap="round"/>
 
-    <!-- Monogram: AM -->
-    <text x="100" y="112" font-family="'Cinzel', 'Playfair Display', serif" font-size="36" font-weight="700" fill="url(#goldText)" text-anchor="middle" letter-spacing="4">AM</text>
+    <!-- Monogram AM: Crisp Beveled Embossing (Shadow + Highlight + Core Fill) -->
+    <!-- Highlight Underlay -->
+    <text x="100.5" y="113.5" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif" font-size="39" font-weight="900" fill="#FFF4D8" text-anchor="middle" letter-spacing="4" opacity="0.9">AM</text>
+    <!-- Dark Shadow Underlay -->
+    <text x="99.5" y="111.5" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif" font-size="39" font-weight="900" fill="#1E0703" text-anchor="middle" letter-spacing="4" opacity="0.7">AM</text>
+    <!-- Core Deep Burgundy-Bronze Lettering -->
+    <text x="100" y="112" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif" font-size="39" font-weight="900" fill="#3D140C" text-anchor="middle" letter-spacing="4">AM</text>
 
-    <!-- Sub-text ribbon: 2026 -->
-    <text x="100" y="132" font-family="'Cinzel', 'Montserrat', serif" font-size="10" font-weight="600" fill="url(#goldText)" text-anchor="middle" letter-spacing="3">29 . XI . 2026</text>
+    <!-- Sub-text Date: 29 . XI . 2026 -->
+    <!-- Highlight Underlay -->
+    <text x="100.5" y="132.5" font-family="'Cinzel', 'Montserrat', 'Arial', sans-serif" font-size="11" font-weight="800" fill="#FFF4D8" text-anchor="middle" letter-spacing="3" opacity="0.85">29 . XI . 2026</text>
+    <!-- Core Deep Lettering -->
+    <text x="100" y="132" font-family="'Cinzel', 'Montserrat', 'Arial', sans-serif" font-size="11" font-weight="800" fill="#3D140C" text-anchor="middle" letter-spacing="3">29 . XI . 2026</text>
 
-    <!-- Bottom floral bow -->
-    <circle cx="100" cy="144" r="2.5" fill="url(#goldText)"/>
-    <path d="M96 145 C90 148, 86 147, 84 144" stroke="url(#goldText)" stroke-width="1" fill="none"/>
-    <path d="M104 145 C110 148, 114 147, 116 144" stroke="url(#goldText)" stroke-width="1" fill="none"/>
+    <!-- Bottom Ornament -->
+    <circle cx="100" cy="144" r="2.5" fill="#3E150D"/>
+    <path d="M94 145 C88 148, 84 147, 82 144" stroke="#3E150D" stroke-width="1.4" fill="none"/>
+    <path d="M106 145 C112 148, 116 147, 118 144" stroke="#3E150D" stroke-width="1.4" fill="none"/>
   </g>
 </svg>

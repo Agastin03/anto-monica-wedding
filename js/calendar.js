@@ -9,8 +9,8 @@
   const events = {
     ceremony: {
       title: "Anto & Monica – Holy Matrimony Ceremony",
-      description: "Together with our families, we joyfully invite you to celebrate our wedding ceremony at Seven Dolour's Church. Verse: 'The Lord has made everything beautiful in its time.' — Ecclesiastes 3:11",
-      location: "Seven Dolour's Church, Mettupatti, Dindigul, Tamil Nadu, India",
+      description: "Together with our families, we joyfully invite you to celebrate our wedding ceremony at Seven Dolours Church. Verse: 'The Lord has made everything beautiful in its time.' — Ecclesiastes 3:11",
+      location: "Seven Dolours Church, Mettupatti, Dindigul, Tamil Nadu, India",
       start: "20261129T050000Z", // 10:30 AM IST (UTC 05:00)
       end: "20261129T061500Z",   // 11:45 AM IST (UTC 06:15)
       filename: "Anto-Monica-Wedding-Ceremony.ics"

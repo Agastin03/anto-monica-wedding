@@ -119,6 +119,36 @@
     document.body.removeChild(textArea);
   }
 
+  // Active Navigation Highlighting on Scroll
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id], header[id]');
+  
+  function updateActiveNav() {
+    let currentId = '';
+    const scrollPos = window.scrollY + 140;
+
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+
+    if (currentId) {
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+  }
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+
   // WhatsApp Share Generator (Updated with Anto & Monica)
   const whatsappShareBtn = document.getElementById('whatsapp-share-btn');
   if (whatsappShareBtn) {
@@ -130,7 +160,7 @@
         `Together with our families, we joyfully invite you to celebrate the holy matrimony of\n\n` +
         `💍 *Anto Viagul & Monica Merlin*\n\n` +
         `📅 *Date:* Sunday, 29 November 2026\n` +
-        `⛪ *Ceremony:* Seven Dolour's Church, Mettupatti, Dindigul (10:30 AM – 11:45 AM)\n` +
+        `⛪ *Ceremony:* Seven Dolours Church, Mettupatti, Dindigul (10:30 AM – 11:45 AM)\n` +
         `✨ *Reception:* Sowrastra Sabai, Nootrandu Vizha Mahal, Bharathipuram, Dindigul\n\n` +
         `_"The Lord has made everything beautiful in its time."_ — Ecclesiastes 3:11\n\n` +
         `View our digital wedding invitation:\n${currentUrl}`;

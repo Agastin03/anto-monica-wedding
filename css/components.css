@@ -120,6 +120,7 @@
   border-radius: 135px 135px 24px 24px;
   padding: 6px;
   background: var(--grad-gold);
+  overflow: visible !important;
   box-shadow: 
     0 16px 40px rgba(101, 65, 50, 0.24),
     0 0 0 1px rgba(255, 255, 255, 0.7) inset;
@@ -165,20 +166,25 @@
 
 .hero-portrait-flourish {
   position: absolute;
-  bottom: -15px;
+  bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--bg-card);
-  padding: 0.35rem 1.25rem;
+  background: #FFFDF9;
+  padding: 0.45rem 1.45rem;
   border-radius: 9999px;
   border: 1.5px solid var(--accent-gold);
   font-family: var(--font-serif-title);
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.76rem;
+  font-weight: 700;
   letter-spacing: 2px;
-  color: var(--accent-gold-dark);
+  line-height: 1.35;
+  color: var(--accent-burgundy);
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(101, 65, 50, 0.12);
+  box-shadow: 0 4px 14px rgba(101, 65, 50, 0.18);
+  z-index: 15;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Couple Names Display */
@@ -392,12 +398,17 @@
 }
 
 .countdown-celebration {
+  display: none !important; /* Kept strictly hidden until wedding time */
   background: var(--grad-gold-soft);
   border: 2px solid var(--accent-gold);
   border-radius: 20px;
   padding: 2.5rem 1.5rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.countdown-celebration.is-celebrating {
+  display: block !important;
 }
 
 .countdown-celebration-title {

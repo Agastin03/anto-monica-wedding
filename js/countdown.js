@@ -1,14 +1,16 @@
 /**
  * Anto & Monica Wedding Invitation
  * Live Countdown Timer (Asia/Kolkata - IST)
- * Target: 29 November 2026, 10:30 AM IST
+ * Target: Sunday, 29 November 2026, 10:30 AM IST
+ * IST is UTC+05:30 -> UTC 05:00:00 -> 1795928400000 ms
  */
 
 (function () {
   'use strict';
 
-  // Target time: 29 November 2026, 10:30 AM IST (which is 05:00:00 UTC)
-  const TARGET_TIMESTAMP = Date.UTC(2026, 10, 29, 5, 0, 0);
+  // Target time: 29 November 2026, 10:30:00 AM IST (UTC 05:00:00)
+  // Exact Unix epoch timestamp in milliseconds: 1795928400000
+  const TARGET_TIMESTAMP = 1795928400000;
 
   const daysEl = document.getElementById('count-days');
   const hoursEl = document.getElementById('count-hours');
@@ -17,37 +19,69 @@
   const countdownGrid = document.getElementById('countdown-grid');
   const celebrationMsg = document.getElementById('countdown-celebration');
 
-  if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
-
   function padZero(num) {
-    return num < 10 ? '0' + num : num.toString();
+    const val = Math.max(0, Math.floor(num));
+    return val < 10 ? '0' + val : String(val);
   }
 
   function updateCountdown() {
-    const now = Date.now();
-    const diff = TARGET_TIMESTAMP - now;
+    try {
+      const now = Date.now();
+      const diff = TARGET_TIMESTAMP - now;
 
-    if (diff <= 0) {
-      if (countdownGrid) countdownGrid.style.display = 'none';
-      if (celebrationMsg) {
-        celebrationMsg.style.display = 'block';
-        celebrationMsg.classList.add('reveal', 'active');
+      // When the sacred matrimony ceremony time has genuinely arrived
+      if (diff <= 0) {
+        if (countdownGrid) {
+          countdownGrid.style.display = 'none';
+        }
+        if (celebrationMsg) {
+          celebrationMsg.style.display = 'block';
+          celebrationMsg.classList.add('is-celebrating', 'reveal', 'active');
+        }
+        return;
       }
-      return;
+
+      // During the countdown period before the wedding
+      if (countdownGrid && countdownGrid.style.display === 'none') {
+        countdownGrid.style.display = 'grid';
+      }
+      if (celebrationMsg) {
+        celebrationMsg.style.display = 'none';
+        celebrationMsg.classList.remove('is-celebrating');
+      }
+
+      const totalSeconds = Math.max(0, Math.floor(diff / 1000));
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      if (daysEl) daysEl.textContent = padZero(days);
+      if (hoursEl) hoursEl.textContent = padZero(hours);
+      if (minutesEl) minutesEl.textContent = padZero(minutes);
+      if (secondsEl) secondsEl.textContent = padZero(seconds);
+    } catch (err) {
+      console.error("Countdown calculation error:", err);
     }
-
-    const totalSeconds = Math.floor(diff / 1000);
-    const days = Math.floor(totalSeconds / (3600 * 24));
-    const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-
-    daysEl.textContent = padZero(days);
-    hoursEl.textContent = padZero(hours);
-    minutesEl.textContent = padZero(minutes);
-    secondsEl.textContent = padZero(seconds);
   }
 
+  // Run calculation immediately upon script evaluation
   updateCountdown();
-  setInterval(updateCountdown, 1000);
+
+  // Tick every second
+  const timerInterval = setInterval(updateCountdown, 1000);
+
+  // Recalculate on DOMContentLoaded, window load, and pageshow (back/forward cache restore)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateCountdown);
+  }
+  window.addEventListener('load', updateCountdown);
+  window.addEventListener('pageshow', updateCountdown);
+
+  // Expose helper to global window for testing & debugging
+  window.WeddingCountdown = {
+    target: TARGET_TIMESTAMP,
+    update: updateCountdown,
+    timerInterval: timerInterval
+  };
 })();
