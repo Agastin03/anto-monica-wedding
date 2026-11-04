@@ -1,7 +1,7 @@
 {
-  "name": "david-monica-wedding-invitation",
+  "name": "anto-monica-wedding-invitation",
   "version": "1.0.0",
-  "description": "Premium Digital Wedding Invitation Website for David Anto Viagul & Monica Merlin",
+  "description": "Premium Digital Wedding Invitation Website for Anto Viagul & Monica Merlin",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,7 +9,7 @@
   },
   "keywords": [
     "wedding-invitation",
-    "david-and-monica",
+    "anto-and-monica",
     "dindigul-wedding",
     "christian-wedding",
     "responsive-website"

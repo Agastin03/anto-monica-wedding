@@ -1,6 +1,6 @@
 /* ==========================================================================
-   David & Monica – Components Stylesheet
-   Sections 2 through 7 + Interactive Modules
+   Anto & Monica – Components Stylesheet
+   Sections 2 through 7 (Mobile-First & Pixel-Perfect)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -12,8 +12,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3.5rem 1rem 5rem;
+  padding: 2.5rem 0.75rem 4.5rem;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 3.5rem 1.5rem 5.5rem;
+  }
 }
 
 .hero-card {
@@ -21,28 +27,32 @@
   max-width: 820px;
   width: 100%;
   margin: 0 auto;
-  background: rgba(255, 253, 249, 0.95);
+  background: rgba(255, 253, 249, 0.96);
   border: 1.5px solid var(--accent-gold);
-  border-radius: 28px;
-  padding: 3.5rem 1.5rem;
+  border-radius: 24px;
+  padding: 2.75rem 1.25rem;
   box-shadow: 
     var(--shadow-lg),
-    0 0 0 8px rgba(255, 247, 236, 0.8),
-    0 0 0 10px rgba(196, 154, 85, 0.35);
+    0 0 0 6px rgba(255, 247, 236, 0.8),
+    0 0 0 8px rgba(196, 154, 85, 0.3);
 }
 
 @media (min-width: 768px) {
   .hero-card {
     padding: 4.5rem 3.5rem;
     border-radius: 36px;
+    box-shadow: 
+      var(--shadow-lg),
+      0 0 0 8px rgba(255, 247, 236, 0.8),
+      0 0 0 10px rgba(196, 154, 85, 0.35);
   }
 }
 
 /* Corner Filigree on Hero Card */
 .card-corner {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   opacity: 0.85;
   pointer-events: none;
 }
@@ -54,10 +64,10 @@
   }
 }
 
-.card-corner-tl { top: 10px; left: 10px; }
-.card-corner-tr { top: 10px; right: 10px; transform: scaleX(-1); }
-.card-corner-bl { bottom: 10px; left: 10px; transform: scaleY(-1); }
-.card-corner-br { bottom: 10px; right: 10px; transform: scale(-1); }
+.card-corner-tl { top: 8px; left: 8px; }
+.card-corner-tr { top: 8px; right: 8px; transform: scaleX(-1); }
+.card-corner-bl { bottom: 8px; left: 8px; transform: scaleY(-1); }
+.card-corner-br { bottom: 8px; right: 8px; transform: scale(-1); }
 
 /* Top Small Cross */
 .hero-cross {
@@ -78,7 +88,7 @@
 
 @media (min-width: 768px) {
   .hero-celebrate-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -89,42 +99,44 @@
   font-style: italic;
   color: var(--text-muted);
   max-width: 580px;
-  margin: 0 auto 2.25rem;
-  line-height: 1.6;
+  margin: 0 auto 2rem;
+  line-height: 1.55;
+  padding: 0 0.5rem;
 }
 
 @media (min-width: 768px) {
   .hero-invite-statement {
     font-size: 1.3rem;
+    margin-bottom: 2.5rem;
   }
 }
 
-/* Arch-Shaped Couple Portrait Frame */
+/* Cathedral Arch Portrait Frame */
 .hero-portrait-wrapper {
   position: relative;
-  width: 250px;
-  height: 330px;
+  width: 260px;
+  height: 360px;
   margin: 0 auto 2.5rem;
-  border-radius: 125px 125px 18px 18px;
+  border-radius: 130px 130px 22px 22px;
   padding: 8px;
   background: var(--grad-gold);
   box-shadow: 
-    0 15px 35px rgba(101, 65, 50, 0.22),
-    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+    0 16px 40px rgba(101, 65, 50, 0.24),
+    0 0 0 1px rgba(255, 255, 255, 0.7) inset;
 }
 
 @media (min-width: 640px) {
   .hero-portrait-wrapper {
-    width: 290px;
-    height: 380px;
-    border-radius: 145px 145px 22px 22px;
+    width: 320px;
+    height: 430px;
+    border-radius: 160px 160px 26px 26px;
   }
 }
 
 .hero-portrait-inner {
   width: 100%;
   height: 100%;
-  border-radius: 118px 118px 12px 12px;
+  border-radius: 122px 122px 16px 16px;
   overflow: hidden;
   position: relative;
   background: #FFF7EC;
@@ -133,7 +145,7 @@
 
 @media (min-width: 640px) {
   .hero-portrait-inner {
-    border-radius: 138px 138px 16px 16px;
+    border-radius: 152px 152px 20px 20px;
   }
 }
 
@@ -141,18 +153,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   transition: transform 0.8s ease;
+  display: block;
 }
 
 .hero-portrait-wrapper:hover .hero-portrait-img {
   transform: scale(1.04);
 }
 
-/* Delicate Arch Floating Laurel */
 .hero-portrait-flourish {
   position: absolute;
-  bottom: -16px;
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--bg-card);
@@ -170,15 +182,15 @@
 
 /* Couple Names Display */
 .hero-couple-names {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-groom-name,
 .hero-bride-name {
   font-family: var(--font-serif-title);
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   color: var(--text-dark);
   text-transform: uppercase;
   display: block;
@@ -188,7 +200,7 @@
 @media (min-width: 640px) {
   .hero-groom-name,
   .hero-bride-name {
-    font-size: 2.75rem;
+    font-size: 2.65rem;
     letter-spacing: 3.5px;
   }
 }
@@ -197,12 +209,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0.35rem 0;
+  margin: 0.2rem 0;
 }
 
 .hero-ampersand {
   font-family: var(--font-script);
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--accent-gold);
   display: inline-block;
   transform: rotate(-3deg);
@@ -211,7 +223,7 @@
 
 @media (min-width: 640px) {
   .hero-ampersand {
-    font-size: 3.8rem;
+    font-size: 3.6rem;
   }
 }
 
@@ -219,19 +231,19 @@
 .hero-date-ribbon {
   display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.75rem 2rem;
+  gap: 0.75rem;
+  padding: 0.65rem 1.5rem;
   background: var(--grad-gold-soft);
   border: 1px solid var(--accent-gold);
   border-radius: 9999px;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 .hero-date-text {
   font-family: var(--font-serif-title);
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   color: var(--accent-burgundy);
   text-transform: uppercase;
 }
@@ -247,7 +259,7 @@
    SECTION 3: Bible Verse Section
    -------------------------------------------------------------------------- */
 .verse-section {
-  padding: 5rem 0;
+  padding: 4.5rem 0;
   text-align: center;
 }
 
@@ -256,8 +268,8 @@
   margin: 0 auto;
   background: var(--bg-card);
   border: 1.5px solid var(--accent-gold);
-  border-radius: 24px;
-  padding: 3.5rem 2rem;
+  border-radius: 22px;
+  padding: 2.75rem 1.5rem;
   position: relative;
   box-shadow: var(--shadow-md);
 }
@@ -265,24 +277,25 @@
 @media (min-width: 768px) {
   .verse-card {
     padding: 4.5rem 3.5rem;
+    border-radius: 28px;
   }
 }
 
 .verse-cross {
-  width: 38px;
-  height: 50px;
-  margin: 0 auto 1.5rem;
+  width: 36px;
+  height: 48px;
+  margin: 0 auto 1.25rem;
   display: block;
 }
 
 .verse-quote {
   font-family: var(--font-body);
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   font-style: italic;
   font-weight: 500;
   color: var(--text-dark);
   line-height: 1.55;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   position: relative;
 }
 
@@ -294,9 +307,9 @@
 
 .verse-citation {
   font-family: var(--font-serif-title);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   color: var(--accent-burgundy);
   text-transform: uppercase;
   display: block;
@@ -306,16 +319,17 @@
    SECTION 4: Wedding Countdown Timer
    -------------------------------------------------------------------------- */
 .countdown-section {
-  padding: 5rem 0;
+  padding: 4.5rem 0;
   text-align: center;
 }
 
 .countdown-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  max-width: 680px;
-  margin: 0 auto 2.5rem;
+  gap: 0.85rem;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  padding: 0 0.5rem;
 }
 
 @media (min-width: 640px) {
@@ -328,8 +342,8 @@
 .countdown-card {
   background: var(--bg-card);
   border: 1.5px solid var(--accent-gold);
-  border-radius: 18px;
-  padding: 1.5rem 0.75rem;
+  border-radius: 16px;
+  padding: 1.35rem 0.6rem;
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
@@ -353,7 +367,7 @@
 
 .countdown-number {
   font-family: var(--font-serif-title);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--accent-burgundy);
   line-height: 1.1;
@@ -369,14 +383,13 @@
 
 .countdown-label {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-muted);
 }
 
-/* Celebration State when Date is Reached */
 .countdown-celebration {
   background: var(--grad-gold-soft);
   border: 2px solid var(--accent-gold);
@@ -388,14 +401,14 @@
 
 .countdown-celebration-title {
   font-family: var(--font-script);
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   color: var(--accent-burgundy);
   margin-bottom: 0.5rem;
 }
 
 .countdown-celebration-text {
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-style: italic;
   color: var(--text-dark);
 }
@@ -404,13 +417,13 @@
    SECTIONS 5 & 6: Events (Ceremony & Reception Cards)
    -------------------------------------------------------------------------- */
 .events-section {
-  padding: 5.5rem 0;
+  padding: 4.5rem 0;
 }
 
 .events-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -418,15 +431,16 @@
 @media (min-width: 860px) {
   .events-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
 }
 
 .event-card {
   background: var(--bg-card);
   border: 1.5px solid var(--accent-gold);
-  border-radius: 24px;
+  border-radius: 22px;
   box-shadow: var(--shadow-md);
-  padding: 2.5rem 1.75rem;
+  padding: 2.25rem 1.25rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -436,6 +450,7 @@
 @media (min-width: 640px) {
   .event-card {
     padding: 3rem 2.25rem;
+    border-radius: 26px;
   }
 }
 
@@ -444,17 +459,16 @@
   box-shadow: var(--shadow-lg), var(--shadow-gold);
 }
 
-/* Top Illustration Badge in Event Card */
 .event-ill-badge {
   width: 100%;
-  height: 180px;
-  margin: 0 auto 1.5rem;
+  height: 160px;
+  margin: 0 auto 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   background: var(--grad-gold-soft);
-  border-radius: 16px;
+  border-radius: 14px;
   border: 1px solid rgba(196, 154, 85, 0.4);
   padding: 0.75rem;
   overflow: hidden;
@@ -468,31 +482,36 @@
 
 .event-type-tag {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--accent-gold-dark);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
   display: block;
 }
 
 .event-card-title {
   font-family: var(--font-serif-title);
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   color: var(--text-dark);
   margin-bottom: 1.25rem;
 }
 
-/* Details list with luxury icons */
+@media (min-width: 640px) {
+  .event-card-title {
+    font-size: 1.75rem;
+  }
+}
+
 .event-details-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   flex-grow: 1;
 }
 
@@ -504,9 +523,9 @@
 }
 
 .event-icon-circle {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
   border-radius: 50%;
   background: var(--bg-secondary);
   border: 1px solid var(--accent-gold);
@@ -518,8 +537,8 @@
 }
 
 .event-icon-circle svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
 }
 
 .event-detail-content {
@@ -528,7 +547,7 @@
 
 .event-detail-label {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -539,19 +558,18 @@
 
 .event-detail-value {
   font-family: var(--font-body);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--text-dark);
   line-height: 1.35;
 }
 
 .event-detail-subvalue {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text-muted);
   display: block;
 }
 
-/* Timing Status Pill (e.g. for reception) */
 .event-badge-tba {
   display: inline-flex;
   align-items: center;
@@ -562,13 +580,12 @@
   border-radius: 9999px;
   padding: 0.25rem 0.85rem;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 1px;
   margin-top: 0.35rem;
 }
 
-/* Event Card Actions */
 .event-actions {
   display: flex;
   flex-direction: column;
@@ -589,20 +606,22 @@
    SECTION 7: Couple Photo Gallery
    -------------------------------------------------------------------------- */
 .gallery-section {
-  padding: 5.5rem 0;
+  padding: 4.5rem 0;
   text-align: center;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  padding: 0 0.5rem;
 }
 
 @media (min-width: 580px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -615,7 +634,7 @@
 
 .gallery-item {
   position: relative;
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
   background: var(--bg-card);
   border: 1.5px solid var(--accent-gold);
@@ -626,7 +645,7 @@
 }
 
 .gallery-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-gold), var(--shadow-md);
 }
 
@@ -634,23 +653,24 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
 }
 
 .gallery-item:hover .gallery-img {
   transform: scale(1.06);
 }
 
-/* Gallery Item Hover Overlay */
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(45, 26, 19, 0.85) 0%, rgba(45, 26, 19, 0.2) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(45, 26, 19, 0.88) 0%, rgba(45, 26, 19, 0.2) 60%, transparent 100%);
   opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1.75rem 1.25rem;
+  padding: 1.5rem 1.15rem;
   text-align: left;
   transition: opacity var(--trans-smooth);
 }
@@ -661,28 +681,28 @@
 
 .gallery-item-title {
   font-family: var(--font-serif-title);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #FFF7EC;
   letter-spacing: 1.5px;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
   text-transform: uppercase;
 }
 
 .gallery-item-subtitle {
   font-family: var(--font-script);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: var(--accent-gold-bright);
 }
 
 .gallery-zoom-icon {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  width: 38px;
-  height: 38px;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: rgba(255, 247, 236, 0.9);
+  background: rgba(255, 247, 236, 0.92);
   color: var(--text-dark);
   display: flex;
   align-items: center;
@@ -702,7 +722,7 @@
 .lightbox-modal {
   position: fixed;
   inset: 0;
-  background: rgba(26, 14, 9, 0.94);
+  background: rgba(26, 14, 9, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
@@ -712,7 +732,7 @@
   padding: 1rem;
   opacity: 0;
   visibility: hidden;
-  transition: all var(--trans-fast);
+  transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .lightbox-modal.open {
@@ -722,8 +742,8 @@
 
 .lightbox-content {
   position: relative;
-  max-width: 90vw;
-  max-height: 85vh;
+  max-width: 92vw;
+  max-height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -731,7 +751,7 @@
 
 .lightbox-img {
   max-width: 100%;
-  max-height: 75vh;
+  max-height: 74vh;
   border-radius: 12px;
   border: 2px solid var(--accent-gold);
   box-shadow: 0 20px 50px rgba(0,0,0,0.6);
@@ -739,14 +759,14 @@
 }
 
 .lightbox-caption {
-  margin-top: 1rem;
+  margin-top: 0.85rem;
   text-align: center;
   color: #FFF7EC;
 }
 
 .lightbox-caption-title {
   font-family: var(--font-serif-title);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -755,24 +775,25 @@
 
 .lightbox-caption-desc {
   font-family: var(--font-script);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   color: #FFF7EC;
   margin-top: 0.15rem;
 }
 
 .lightbox-btn {
   position: absolute;
-  background: rgba(45, 26, 19, 0.7);
+  background: rgba(45, 26, 19, 0.75);
   border: 1px solid var(--accent-gold);
   color: #FFF7EC;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all var(--trans-fast);
+  z-index: 10;
 }
 
 .lightbox-btn:hover {
@@ -781,152 +802,33 @@
 }
 
 .lightbox-close {
-  top: -24px;
-  right: -24px;
+  top: -20px;
+  right: -20px;
 }
 
 .lightbox-prev {
-  left: -60px;
+  left: -55px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .lightbox-next {
-  right: -60px;
+  right: -55px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 @media (max-width: 768px) {
-  .lightbox-prev { left: 10px; }
-  .lightbox-next { right: 10px; }
-  .lightbox-close { top: 10px; right: 10px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-close { top: 8px; right: 8px; }
 }
 
 /* --------------------------------------------------------------------------
-   INTERACTIVE MODULE: Guestbook & Blessings
+   WhatsApp Share Bar
    -------------------------------------------------------------------------- */
-.guestbook-section {
-  padding: 5.5rem 0;
-  text-align: center;
-}
-
-.guestbook-container {
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.wishes-form-card {
-  background: var(--bg-card);
-  border: 1.5px solid var(--accent-gold);
-  border-radius: 24px;
-  padding: 2.5rem 1.5rem;
-  box-shadow: var(--shadow-md);
-  margin-bottom: 3rem;
-  text-align: left;
-}
-
-@media (min-width: 640px) {
-  .wishes-form-card {
-    padding: 3rem 2.5rem;
-  }
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-label {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--text-dark);
-  margin-bottom: 0.5rem;
-}
-
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 0.85rem 1.25rem;
-  font-family: var(--font-body);
-  font-size: 1.15rem;
-  color: var(--text-dark);
-  background: #FFFDF9;
-  border: 1.5px solid var(--border-gold);
-  border-radius: 12px;
-  transition: all var(--trans-fast);
-  outline: none;
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  border-color: var(--accent-gold);
-  box-shadow: 0 0 0 4px rgba(196, 154, 85, 0.15);
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 110px;
-}
-
-/* Wishes Feed / Carousel */
-.wishes-feed {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  text-align: left;
-}
-
-@media (min-width: 640px) {
-  .wishes-feed {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.wish-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-gold);
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  position: relative;
-}
-
-.wish-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.75rem;
-}
-
-.wish-author {
-  font-family: var(--font-serif-title);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--accent-burgundy);
-  letter-spacing: 1px;
-}
-
-.wish-date {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--text-light);
-}
-
-.wish-text {
-  font-family: var(--font-body);
-  font-size: 1.15rem;
-  font-style: italic;
-  color: var(--text-primary);
-  line-height: 1.5;
-}
-
-/* WhatsApp Share Bar */
 .share-bar-section {
-  padding: 3.5rem 0;
+  padding: 3.5rem 1rem;
   background: var(--grad-gold-soft);
   border-top: 1px solid var(--border-gold);
   border-bottom: 1px solid var(--border-gold);
@@ -947,7 +849,8 @@
 
 .share-bar-desc {
   font-family: var(--font-body);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--text-dark);
   margin-bottom: 1.5rem;
+  line-height: 1.5;
 }

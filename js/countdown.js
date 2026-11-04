@@ -1,5 +1,5 @@
 /**
- * David & Monica Wedding Invitation
+ * Anto & Monica Wedding Invitation
  * Live Countdown Timer (Asia/Kolkata - IST)
  * Target: 29 November 2026, 10:30 AM IST
  */
@@ -28,7 +28,6 @@
     const diff = TARGET_TIMESTAMP - now;
 
     if (diff <= 0) {
-      // The ceremony has begun or passed
       if (countdownGrid) countdownGrid.style.display = 'none';
       if (celebrationMsg) {
         celebrationMsg.style.display = 'block';
@@ -49,7 +48,6 @@
     secondsEl.textContent = padZero(seconds);
   }
 
-  // Initial call and start interval
   updateCountdown();
   setInterval(updateCountdown, 1000);
 })();

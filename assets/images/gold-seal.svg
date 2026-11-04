@@ -8,14 +8,6 @@
       <stop offset="85%" stop-color="#8E6928"/>
       <stop offset="100%" stop-color="#5C4113"/>
     </radialGradient>
-    
-    <!-- Deep Red Wax Variant for optional burgundy vibe -->
-    <radialGradient id="waxBurgundy" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#BA473E"/>
-      <stop offset="45%" stop-color="#8E302A"/>
-      <stop offset="85%" stop-color="#5A1B16"/>
-      <stop offset="100%" stop-color="#360E0B"/>
-    </radialGradient>
 
     <!-- Bevel / 3D Shadow -->
     <filter id="sealShadow" x="-15%" y="-15%" width="130%" height="135%">
@@ -51,7 +43,6 @@
     <!-- Laurel Wreath Leaves (Left) -->
     <g stroke="url(#goldText)" stroke-width="1.2" fill="none" opacity="0.85">
       <path d="M56 100 C56 75, 75 58, 92 56"/>
-      <!-- Leaves -->
       <path d="M60 92 C56 89, 52 90, 50 94 C53 96, 57 95, 60 92 Z" fill="url(#goldText)"/>
       <path d="M65 82 C61 80, 58 82, 57 86 C60 88, 64 86, 65 82 Z" fill="url(#goldText)"/>
       <path d="M72 73 C68 72, 65 75, 65 79 C68 80, 72 77, 72 73 Z" fill="url(#goldText)"/>
@@ -61,7 +52,6 @@
     <!-- Laurel Wreath Leaves (Right) -->
     <g stroke="url(#goldText)" stroke-width="1.2" fill="none" opacity="0.85">
       <path d="M144 100 C144 75, 125 58, 108 56"/>
-      <!-- Leaves -->
       <path d="M140 92 C144 89, 148 90, 150 94 C147 96, 143 95, 140 92 Z" fill="url(#goldText)"/>
       <path d="M135 82 C139 80, 142 82, 143 86 C140 88, 136 86, 135 82 Z" fill="url(#goldText)"/>
       <path d="M128 73 C132 72, 135 75, 135 79 C132 80, 128 77, 128 73 Z" fill="url(#goldText)"/>
@@ -71,10 +61,8 @@
     <!-- Mini Top Cross -->
     <path d="M100 50 L100 62 M95 54 L105 54" stroke="url(#goldText)" stroke-width="1.5" stroke-linecap="round"/>
 
-    <!-- Monogram: D & M -->
-    <text x="73" y="112" font-family="'Cinzel', 'Playfair Display', serif" font-size="34" font-weight="700" fill="url(#goldText)" text-anchor="middle" letter-spacing="1">D</text>
-    <text x="100" y="106" font-family="'Great Vibes', 'Alex Brush', cursive" font-size="28" fill="#FFF7EC" text-anchor="middle" font-style="italic">&amp;</text>
-    <text x="127" y="112" font-family="'Cinzel', 'Playfair Display', serif" font-size="34" font-weight="700" fill="url(#goldText)" text-anchor="middle" letter-spacing="1">M</text>
+    <!-- Monogram: AM -->
+    <text x="100" y="112" font-family="'Cinzel', 'Playfair Display', serif" font-size="36" font-weight="700" fill="url(#goldText)" text-anchor="middle" letter-spacing="4">AM</text>
 
     <!-- Sub-text ribbon: 2026 -->
     <text x="100" y="132" font-family="'Cinzel', 'Montserrat', serif" font-size="10" font-weight="600" fill="url(#goldText)" text-anchor="middle" letter-spacing="3">29 . XI . 2026</text>

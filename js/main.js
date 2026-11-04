@@ -1,5 +1,5 @@
 /**
- * David & Monica Wedding Invitation
+ * Anto & Monica Wedding Invitation
  * Main Application Script
  */
 
@@ -21,12 +21,12 @@
     }, 3200);
   };
 
-  // Scroll Reveal Animations
+  // Scroll Reveal Animations with smooth thresholds
   const revealElements = document.querySelectorAll('.reveal');
   const observerOptions = {
     root: null,
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.12
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.1
   };
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -119,7 +119,7 @@
     document.body.removeChild(textArea);
   }
 
-  // WhatsApp Share Generator
+  // WhatsApp Share Generator (Updated with Anto & Monica)
   const whatsappShareBtn = document.getElementById('whatsapp-share-btn');
   if (whatsappShareBtn) {
     whatsappShareBtn.addEventListener('click', function (e) {
@@ -128,7 +128,7 @@
       const shareMessage = 
         `🕊️ *Wedding Invitation*\n\n` +
         `Together with our families, we joyfully invite you to celebrate the holy matrimony of\n\n` +
-        `💍 *David Anto Viagul & Monica Merlin*\n\n` +
+        `💍 *Anto Viagul & Monica Merlin*\n\n` +
         `📅 *Date:* Sunday, 29 November 2026\n` +
         `⛪ *Ceremony:* Seven Dolour's Church, Mettupatti, Dindigul (10:30 AM – 11:45 AM)\n` +
         `✨ *Reception:* Sowrastra Sabai, Nootrandu Vizha Mahal, Bharathipuram, Dindigul\n\n` +
@@ -144,7 +144,7 @@
   const backToTopBtn = document.getElementById('back-to-top-btn');
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 400) {
         backToTopBtn.style.opacity = '1';
         backToTopBtn.style.visibility = 'visible';
       } else {
@@ -158,34 +158,5 @@
     });
   }
 
-  // Smart Progressive Photo Loader:
-  // Detects if the couple's real photographs (JPG/PNG/WEBP) are present,
-  // and smoothly transitions to them while maintaining the ornate vector illustration as fallback.
-  function checkAndLoadRealPhotos() {
-    const heroImg = document.getElementById('hero-couple-img');
-    if (heroImg && heroImg.dataset.realSrc) {
-      const realHero = new Image();
-      realHero.src = heroImg.dataset.realSrc;
-      realHero.onload = () => {
-        heroImg.src = realHero.src;
-      };
-    }
-
-    // Check gallery photos (photo1.jpg to photo6.jpg)
-    document.querySelectorAll('.gallery-img').forEach((gImg, idx) => {
-      const potentialJpg = `assets/images/couple/photo${idx + 1}.jpg`;
-      const testImg = new Image();
-      testImg.src = potentialJpg;
-      testImg.onload = () => {
-        gImg.src = potentialJpg;
-        if (window.WeddingGallery && window.WeddingGallery.items[idx]) {
-          window.WeddingGallery.items[idx].src = potentialJpg;
-        }
-      };
-    });
-  }
-
-  checkAndLoadRealPhotos();
-
-  console.log("David & Monica Wedding Invitation initialized successfully.");
+  console.log("Anto & Monica Wedding Invitation initialized successfully.");
 })();

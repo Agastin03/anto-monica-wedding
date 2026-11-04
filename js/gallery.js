@@ -1,5 +1,5 @@
 /**
- * David & Monica Wedding Invitation
+ * Anto & Monica Wedding Invitation
  * Couple Photo Gallery & Lightbox Controller
  */
 
@@ -8,40 +8,34 @@
 
   const galleryItems = [
     {
-      src: 'assets/images/couple/photo1.svg',
-      fallback: 'assets/images/couple/photo1.jpg',
-      title: 'The Sacred Promise',
-      subtitle: 'Before God & Loved Ones'
+      src: 'assets/images/couple/photo1.jpg',
+      title: 'Traditional Elegance',
+      subtitle: 'United in Faith & Grace'
     },
     {
-      src: 'assets/images/couple/photo2.svg',
-      fallback: 'assets/images/couple/photo2.jpg',
-      title: 'Hand in Hand',
-      subtitle: 'Two Hearts United As One'
+      src: 'assets/images/couple/photo2.jpg',
+      title: 'Love in Lights',
+      subtitle: 'Two Hearts, One Celebration'
     },
     {
-      src: 'assets/images/couple/photo3.svg',
-      fallback: 'assets/images/couple/photo3.jpg',
-      title: 'Walking in Faith',
-      subtitle: 'Guided by Grace & Devotion'
+      src: 'assets/images/couple/photo3.png',
+      title: 'Written in the Stars',
+      subtitle: 'Under God’s Guiding Light'
     },
     {
-      src: 'assets/images/couple/photo4.svg',
-      fallback: 'assets/images/couple/photo4.jpg',
-      title: 'A Love Ordained',
-      subtitle: 'Blessed with Everlasting Peace'
+      src: 'assets/images/couple/photo4.png',
+      title: 'Timeless Romance',
+      subtitle: 'Beginning Our Eternal Journey'
     },
     {
-      src: 'assets/images/couple/photo5.svg',
-      fallback: 'assets/images/couple/photo5.jpg',
-      title: 'Joyful Hearts',
-      subtitle: 'Laughter, Faith & Cherished Moments'
+      src: 'assets/images/couple/photo5.png',
+      title: 'Moonlit Devotion',
+      subtitle: 'Silhouetted in Holy Love'
     },
     {
-      src: 'assets/images/couple/photo6.svg',
-      fallback: 'assets/images/couple/photo6.jpg',
-      title: 'Forever & Always',
-      subtitle: 'David & Monica • November 2026'
+      src: 'assets/images/couple/photo6.jpg',
+      title: 'Together Forever',
+      subtitle: 'Anto & Monica • 29 November 2026'
     }
   ];
 
@@ -73,7 +67,6 @@
     const item = galleryItems[currentIndex];
     if (!item) return;
 
-    // Check if jpg exists or use svg
     lightboxImg.src = item.src;
     lightboxImg.alt = item.title;
 
@@ -118,7 +111,7 @@
     if (e.key === 'ArrowLeft') showPrev();
   });
 
-  // Touch Swipe on mobile
+  // Touch Swipe for Mobile
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -134,10 +127,10 @@
   function handleSwipe() {
     const threshold = 40;
     if (touchEndX < touchStartX - threshold) {
-      showNext(); // Swiped left -> Next
+      showNext();
     }
     if (touchEndX > touchStartX + threshold) {
-      showPrev(); // Swiped right -> Prev
+      showPrev();
     }
   }
 

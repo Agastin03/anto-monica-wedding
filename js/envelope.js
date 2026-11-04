@@ -1,5 +1,5 @@
 /**
- * David & Monica Wedding Invitation
+ * Anto & Monica Wedding Invitation
  * Envelope 3D Opening Controller
  */
 
@@ -24,24 +24,27 @@
     // Trigger opening animation class on the wrapper
     envelopeWrapper.classList.add('opening');
 
-    // Trigger subtle celebratory sound or start background music if available
+    // Start background music softly
     if (window.WeddingMusic && typeof window.WeddingMusic.startOnInviteOpen === 'function') {
       window.WeddingMusic.startOnInviteOpen();
     }
 
-    // After flap flips and card rises, fade out the envelope screen
+    // Smooth transition
     setTimeout(() => {
       envelopeScreen.classList.add('opened');
       document.body.style.overflow = '';
       
-      // Scroll smoothly to top of main content
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // Trigger scroll reveals for hero
       if (window.triggerHeroReveal) {
         window.triggerHeroReveal();
       }
-    }, 1400);
+
+      // Hide completely from layout after transition completes
+      setTimeout(() => {
+        envelopeScreen.style.display = 'none';
+      }, 900);
+    }, 1300);
   }
 
   function skipEnvelope() {
@@ -51,16 +54,22 @@
     if (window.triggerHeroReveal) {
       window.triggerHeroReveal();
     }
+    setTimeout(() => {
+      envelopeScreen.style.display = 'none';
+    }, 400);
   }
 
   function reopenEnvelope() {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    envelopeScreen.style.display = 'flex';
+    // Force reflow
+    void envelopeScreen.offsetHeight;
     envelopeWrapper.classList.remove('opening');
     envelopeScreen.classList.remove('opened');
     isOpening = false;
+    document.body.style.overflow = 'hidden';
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }
 
-  // Event Listeners
   if (btnOpen) {
     btnOpen.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -93,7 +102,7 @@
     });
   }
 
-  // Prevent background scroll while envelope is active
+  // Prevent scroll while envelope is active
   if (!envelopeScreen.classList.contains('opened')) {
     document.body.style.overflow = 'hidden';
   }
